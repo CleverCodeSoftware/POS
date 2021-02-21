@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>POS Dash | Responsive Bootstrap 4 Admin Dashboard Template</title>
+      <title>POS Dash | CleverCode</title>
       
       <!-- Favicon -->
       <link rel="shortcut icon" href="{{asset('images/favicon.ico')}}" />
       <link rel="stylesheet" href="{{asset('css/backend-plugin.min.css')}}">
       <link rel="stylesheet" href="{{asset('css/backend.css?v=1.0.0')}}">
-      <link rel="stylesheet" href="{{asset('vendor/@fortawesome/fontawesome-free/css/all.min.css')}}">
+      <link rel="stylesheet" href="{{asset('vendor/@fortawesome/fontawesome-free/css/all.min.css')}}">  
       <link rel="stylesheet" href="{{asset('vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css')}}">
       <link rel="stylesheet" href="{{asset('vendor/remixicon/fonts/remixicon.css')}}">
       <link rel="stylesheet" href="{{asset('vendor/@icon/dripicons/dripicons.css')}}">
@@ -577,7 +577,7 @@
                       </li>
                   </ul>
               </nav>
-              <div id="sidebar-bottom" class="position-relative sidebar-bottom">
+              <!-- <div id="sidebar-bottom" class="position-relative sidebar-bottom">
                   <div class="card border-none">
                       <div class="card-body p-0">
                           <div class="sidebarbottom-content">
@@ -587,7 +587,7 @@
                           </div>
                       </div>
                   </div>
-              </div>
+              </div> -->
               <div class="p-3"></div>
           </div>
           </div>      <div class="iq-top-navbar">
@@ -604,7 +604,7 @@
                   <div class="iq-search-bar device-search">
                       <form action="#" class="searchbox">
                           <a class="search-link" href="#"><i class="ri-search-line"></i></a>
-                          <input type="text" class="text search-input" placeholder="Search here...">
+                          <input type="text" class="text search-input" placeholder="Bucar...">
                       </form>
                   </div>
                   <div class="d-flex align-items-center">
@@ -658,8 +658,8 @@
                               </li> -->
                               <li>
                                   <a href="#" class="btn border add-btn shadow-none mx-2 d-none d-md-block"
-                                      data-toggle="modal" data-target="#new-order"><i class="las la-plus mr-2"></i>New
-                                      Order</a>
+                                      data-toggle="modal" data-target="#new-order"><i class="las la-plus mr-2"></i>Nueva
+                                      Orden</a>
                               </li>
                               <li class="nav-item nav-icon search-content">
                                   <a href="#" class="search-toggle rounded" id="dropdownSearch" data-toggle="dropdown"
@@ -865,7 +865,7 @@
               <div class="modal-content">
                   <div class="modal-body">
                       <div class="popup text-left">
-                          <h4 class="mb-3">New Order</h4>
+                          <h4 class="mb-3">Nueva orden</h4>
                           <div class="content create-workform bg-body">
                               <div class="pb-3">
                                   <label class="mb-2">Email</label>
@@ -883,12 +883,10 @@
               </div>
           </div>
       </div>      <div class="content-page">
-     <div class="container-fluid">
-        <div class="row">
+     <div class="container-fluid">        
             <!-- contenido -->
-            @yield('contenido');
+            @yield('contenido')
             <!-- contenido -->
-        </div>
         <!-- Page end  -->
     </div>
       </div>
@@ -899,14 +897,14 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <!-- <div class="col-lg-6">
                             <ul class="list-inline mb-0">
                                 <li class="list-inline-item"><a href="../backend/privacy-policy.html">Privacy Policy</a></li>
                                 <li class="list-inline-item"><a href="../backend/terms-of-service.html">Terms of Use</a></li>
                             </ul>
-                        </div>
-                        <div class="col-lg-6 text-right">
-                            <span class="mr-1"><script>document.write(new Date().getFullYear())</script>©</span> <a href="#" class="">POS Dash</a>.
+                        </div> -->
+                        <div class="col-lg-12 text-right">
+                            <span class="mr-1"><script>document.write(new Date().getFullYear())</script>©</span> <a href="#" class="">CleverCode</a>.
                         </div>
                     </div>
                 </div>
