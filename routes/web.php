@@ -14,9 +14,41 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-// Route::resource('inventario/categoria','CategoriaController');
-Route::get('/inventario/categoria',[CategoriaController::class,'index']);   
+
+// Route::get('/inventario/categoria',[CategoriaController::class,'index']);   
+
+Route::get('/dashboard_login', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+// Route::get('/inventario/categoria',[CategoriaController::class,'index']);
+// Route::get('/inventario/categoria', 'CategoriaController@index');
+
+Route::get('/inventario/categoria', [CategoriaController::class, 'index']);
+
+// Route::get('/inventario/categoria', function () {
+//     return view ('inventario.categorias.create');
+// })->middleware(['auth'])->name('dashboard');
+
+Route::get('/',
+[CategoriaController::class, 'index']
+)->middleware(['auth'])->name('dashboard');
+
+
+Route::get('/inventario/categoria', function () {
+    return view ('inventario.categorias.create');
+})->middleware(['auth'])->name('dashboard');
+
+// Route::get('/', [CategoriaController::class, 'index'])->name('home');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+// Route::resource('/inventario/categoria','CategoriaController');
+
+require __DIR__.'/auth.php';

@@ -6,7 +6,7 @@
       <title>POS Dash | CleverCode</title>
       
       <!-- Favicon -->
-      <link rel="shortcut icon" href="{{secure_asset('images/favicon.ico')}}" />
+      <link rel="shortcut icon" href="{{asset('images/favicon.ico')}}" />
       <link rel="stylesheet" href="{{asset('css/backend-plugin.min.css')}}">
       <link rel="stylesheet" href="{{asset('css/backend.css?v=1.0.0')}}">
       <link rel="stylesheet" href="{{asset('vendor/@fortawesome/fontawesome-free/css/all.min.css')}}">  
@@ -21,10 +21,10 @@
       <link rel="stylesheet" href="{{asset('vendor/mapbox/mapbox-gl.css')}}">  </head>
   <body class="  ">
     <!-- loader Start -->
-    <div id="loading">
-          <div id="loading-center">
-          </div>
-    </div>
+    <!-- <div id="loading">
+        <div id="loading-center">
+        </div>
+    </div> -->
     <!-- loader END -->
     <!-- Wrapper Start -->
     <div class="wrapper">
