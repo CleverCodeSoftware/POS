@@ -54,6 +54,6 @@ Route::get('/',
 [CategoriaController::class, 'index']
 )->middleware(['auth'])->name('dashboard2');
 
-// Route::resource('/inventario/categoria','CategoriaController');
+Route::resource('/inventario/categoria','CategoriaController');
 
 require __DIR__.'/auth.php';
