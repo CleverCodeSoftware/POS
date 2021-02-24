@@ -14,14 +14,13 @@ class CategoriaController extends Controller
     }    
 
     public function index(Request $request){
+        $query=trim($request->get('searchText'));
         if($request){
-            $query=trim($request->get('searchText'));
             $categorias=DB::table('categoria')->where('nombre','LIKE','%'.$query.'%')
             ->where('condicion','=','1')
             ->orderBy('idcategoria','desc')
             ->paginate(7);
             return view('inventario.categoria.index',['categorias'=>$categorias,"searchText"=>$query]);
-
         }
     }
 
