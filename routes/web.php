@@ -33,7 +33,7 @@ Route::get('/dashboard_login', function () {
 // Route::get('/inventario/categoria', function () {
 //     return view ('inventario.categorias.create');
 // })->middleware(['auth'])->name('dashboard');
-
+//2021-2-23
 Route::get('/',
 [CategoriaController::class, 'index']
 )->middleware(['auth'])->name('dashboard');
@@ -48,6 +48,11 @@ Route::get('/inventario/categoria', function () {
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth'])->name('dashboard');
+
+
+Route::get('/',
+[CategoriaController::class, 'index']
+)->middleware(['auth'])->name('dashboard2');
 
 // Route::resource('/inventario/categoria','CategoriaController');
 
