@@ -28,7 +28,7 @@ Route::get('/dashboard_login', function () {
 // Route::get('/inventario/categoria',[CategoriaController::class,'index']);
 // Route::get('/inventario/categoria', 'CategoriaController@index');
 
-Route::get('/inventario/categoria', [CategoriaController::class, 'index']);
+// Route::get('/inventario/categoria', [CategoriaController::class, 'index']);
 
 // Route::get('/inventario/categoria', function () {
 //     return view ('inventario.categorias.create');
@@ -45,9 +45,9 @@ Route::get('/inventario/categoria', function () {
 
 // Route::get('/', [CategoriaController::class, 'index'])->name('home');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
 // Route::resource('/inventario/categoria','CategoriaController');
 
