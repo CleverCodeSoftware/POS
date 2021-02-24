@@ -19,7 +19,11 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
+<<<<<<< HEAD
 Route::get('/inventario/categoria',[CategoriaController::class,'Hola_Jeff_2']);   
+=======
+// Route::get('/inventario/categoria',[CategoriaController::class,'Hola_Jeff']);   
+>>>>>>> 1483ded0561a617940fff22c5f989e3ddb251293
 
 Route::get('/dashboard_login', function () {
     return view('dashboard');
@@ -54,6 +58,6 @@ Route::get('/',
 [CategoriaController::class, 'index']
 )->middleware(['auth'])->name('dashboard2');
 
-// Route::resource('/inventario/categoria','CategoriaController');
+Route::resource('/inventario/categoria','CategoriaController');
 
 require __DIR__.'/auth.php';
