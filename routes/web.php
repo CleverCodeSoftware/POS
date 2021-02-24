@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-Route::get('/inventario/categoria',[CategoriaController::class,'Hola_Jeff']);   
+// Route::get('/inventario/categoria',[CategoriaController::class,'Hola_Jeff']);   
 
 Route::get('/dashboard_login', function () {
     return view('dashboard');
