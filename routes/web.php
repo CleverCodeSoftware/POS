@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,13 +36,19 @@ Route::get('/dashboard_login', function () {
 // })->middleware(['auth'])->name('dashboard');
 //2021-2-23
 Route::get('/',
-[CategoriaController::class, 'index']
+[DashboardController::class, 'index']
 )->middleware(['auth'])->name('dashboard');
 
+Route::get('/inventario/categoria',
+[CategoriaController::class, 'index']
+)->middleware(['auth'])->name('categoria.index');
 
-Route::get('/inventario/categoria', function () {
-    return view ('inventario.categorias.create');
-})->middleware(['auth'])->name('dashboard');
+
+// Route::resource('/inventario/categoria','CategoriaController');
+
+// Route::get('/inventario/categoria', function () {
+//     return view ('inventario.categorias.index');
+// })->middleware(['auth'])->name('dashboard');
 
 // Route::get('/', [CategoriaController::class, 'index'])->name('home');
 
@@ -50,10 +57,9 @@ Route::get('/inventario/categoria', function () {
 // })->middleware(['auth'])->name('dashboard');
 
 
-Route::get('/',
-[CategoriaController::class, 'index']
-)->middleware(['auth'])->name('dashboard2');
+// Route::get('/',
+// [CategoriaController::class, 'index']
+// )->middleware(['auth'])->name('dashboard2');
 
-Route::resource('/inventario/categoria','CategoriaController');
 
 require __DIR__.'/auth.php';
