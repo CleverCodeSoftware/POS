@@ -25,7 +25,7 @@ class CategoriaController extends Controller
     }
 
     public function create(){
-        return view ('inventario.categorias.create');
+        return view ('inventario.categoria.create');
     }
 
     public function store(CategoriaFormRequest $request){

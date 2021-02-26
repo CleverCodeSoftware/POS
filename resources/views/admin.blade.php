@@ -71,12 +71,12 @@
                                   </a>
                               </li>
                               <li class="">
-                                  <a href="../backend/page-list-product.html">
+                                  <a href="{{ url('/inventario/categoria') }}">
                                       <i class="las la-minus"></i><span>Listar Categorías</span>
                                   </a>
                               </li>
                               <li class="">
-                                  <a href="../backend/page-add-product.html">
+                                  <a href="{{ url('/inventario/categoria/create') }}">
                                       <i class="las la-minus"></i><span>Agregar Categoría</span>
                                   </a>
                               </li>

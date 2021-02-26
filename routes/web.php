@@ -39,12 +39,22 @@ Route::get('/',
 [DashboardController::class, 'index']
 )->middleware(['auth'])->name('dashboard');
 
-Route::get('/inventario/categoria',
-[CategoriaController::class, 'index']
-)->middleware(['auth'])->name('categoria.index');
+// Route::get('/inventario/categoria',
+// [CategoriaController::class, 'index']
+// )->middleware(['auth'])->name('categoria.index');
+
+Route::resource('/inventario/categoria',CategoriaController::class)
+->middleware(['auth']);
+
+// Route::resource('/inventario/categoria',[CategoriaController::class]
+// )->middleware(['auth']);
+
+// Route::middleware(['auth'])->group(static function () {
+//     Route::resource('/inventario/categoria','CategoriaController');
+//     // Route::resource('profile', '\App\Http\Controllers\Admin\ProfileController');
+// });
 
 
-// Route::resource('/inventario/categoria','CategoriaController');
 
 // Route::get('/inventario/categoria', function () {
 //     return view ('inventario.categorias.index');
