@@ -43,8 +43,19 @@ Route::get('/',
 // [CategoriaController::class, 'index']
 // )->middleware(['auth'])->name('categoria.index');
 
+Route::patch('/inventario/categoria/{categoria}/edit',
+[CategoriaController::class,'update'])
+->middleware(['auth'])->name('inventario.categoria.update');
+
 Route::resource('/inventario/categoria',CategoriaController::class)
 ->middleware(['auth']);
+
+// Route::get('/inventario/categoria/{categorium}/edit', 'CategoriaController@edit')
+// ->middleware(['auth'])->name('categoria.edit');
+
+// Route::resource('/inventario/categoria', 'CategoriaController')
+// ->middleware(['auth']);
+
 
 // Route::resource('/inventario/categoria',[CategoriaController::class]
 // )->middleware(['auth']);
