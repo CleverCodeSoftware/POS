@@ -861,7 +861,7 @@
                                                       <a href="{{ route('logout')}}" class="btn border" 
                                                       onclick="event.prevenDefault(); 
                                                       document.getElementById('logout-form').submit();">
-                                                      {{ __('logout')}}
+                                                      {{ __('Cerrar sesión')}}
                                                       </a>
                                                       <form id="logout-form" action="{{ route('logout')}}" method="POST" style="display:none;">
                                                         @csrf
