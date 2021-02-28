@@ -25,9 +25,15 @@ class CategoriaFormRequest extends FormRequest
     {
         return [
             'nombre'=>'required|max:150',
-            'description'=>'max:256',
-            'categoriacol'=>'required|max:45',
-            
+            'descripcion'=>'max:256',
+            // 'condicion'=>'required',            
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'nombre.required' => 'El campo nombre es obligatorio',
         ];
     }
 }

@@ -14,19 +14,18 @@ class CategoriaController extends Controller
     }    
 
     public function index(Request $request){
+        $query=trim($request->get('searchText'));
         if($request){
-            $query=trim($request->get('searchText'));
             $categorias=DB::table('categoria')->where('nombre','LIKE','%'.$query.'%')
             ->where('condicion','=','1')
             ->orderBy('idcategoria','desc')
             ->paginate(7);
             return view('inventario.categoria.index',['categorias'=>$categorias,"searchText"=>$query]);
-
         }
     }
 
     public function create(){
-        return view ('inventario.categorias.create');
+        return view ('inventario.categoria.create');
     }
 
     public function store(CategoriaFormRequest $request){
@@ -43,7 +42,7 @@ class CategoriaController extends Controller
     }
 
     public function edit($id){
-        return view('inventario.categoria.show',['categoria'=>Categoria::findOrFail($id)]);
+        return view('inventario.categoria.edit',['categoria'=>Categoria::findOrFail($id)]);
     }
 
     public function update(CategoriaFormRequest $request,$id){
