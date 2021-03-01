@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,7 +48,22 @@ Route::patch('/inventario/categoria/{categoria}/edit',
 [CategoriaController::class,'update'])
 ->middleware(['auth'])->name('inventario.categoria.update');
 
+Route::delete('/inventario/categoria/{categoria}',
+[CategoriaController::class,'destroy'])
+->middleware(['auth'])->name('inventario.categoria.destroy');
+
 Route::resource('/inventario/categoria',CategoriaController::class)
+->middleware(['auth']);
+
+Route::patch('/inventario/producto/{producto}/edit',
+[ProductoController::class,'update'])
+->middleware(['auth'])->name('inventario.producto.update');
+
+Route::delete('/inventario/producto/{producto}',
+[ProductoController::class,'destroy'])
+->middleware(['auth'])->name('inventario.producto.destroy');
+
+Route::resource('/inventario/producto',ProductoController::class)
 ->middleware(['auth']);
 
 // Route::get('/inventario/categoria/{categorium}/edit', 'CategoriaController@edit')

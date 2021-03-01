@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -61,12 +61,12 @@
                           </a>
                           <ul id="product" class="iq-submenu collapse {{ request()->is('inventario/*') ? 'show' : ''  }}" data-parent="#iq-sidebar-toggle">
                               <li class="">
-                                  <a href="{{ url('/inventario/categoria') }}">
+                                  <a href="{{ url('/inventario/producto') }}">
                                       <i class="las la-minus"></i><span>Listar Producto</span>
                                   </a>
                               </li>
                               <li class="">
-                                  <a href="../backend/page-add-product.html">
+                                  <a href="{{ url('/inventario/producto/create') }}">
                                       <i class="las la-minus"></i><span>Agregar Producto</span>
                                   </a>
                               </li>
@@ -853,7 +853,7 @@
                                                       class="rounded profile-img img-fluid avatar-70">
                                               </div>
                                               <div class="p-3">
-                                                  <h5 class="mb-1">{{ Auth::user()->nombre.' '.Auth::user()->nombre }}</h5>
+                                                  <h5 class="mb-1">{{ Auth::user()->nombre.' '.Auth::user()->apellido }}</h5>
                                                   <p class="mb-0">Since 10 march, 2020</p>
                                                   <div class="d-flex align-items-center justify-content-center mt-3">
                                                       <a href="../app/user-profile.html" class="btn border mr-2">Profile</a>

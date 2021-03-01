@@ -34,7 +34,7 @@
                                     <td>
                                     <div class="d-flex align-items-center list-action">
                                         <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Editar" href="{{URL::action('App\Http\Controllers\CategoriaController@edit', $cat->idcategoria)}}" style="margin-right: 10px;"><button type="button" class="mt-2 btn btn-success"><i class="ri-pencil-line"></i>Editar</button></a>
-                                        <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Eliminar" href="#"><button type="button" class="mt-2 btn btn-warning"><i class="ri-delete-bin-line"></i>Eliminar</button></a>
+                                        <a data-placement="top" title="" data-original-title="Eliminar" href="" data-target="#modal-delete-{{$cat->idcategoria}}" data-toggle="modal"><button type="button" class="mt-2 btn btn-warning" ><i class="ri-delete-bin-line"></i>Eliminar</button></a>
                                         <!-- <a class="badge badge-info mr-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="View" href="#"><i class="ri-eye-line mr-0"></i></a> -->
                                         <!-- <a class="badge bg-success mr-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="#"><i class="ri-pencil-line mr-0"></i>Editar</a>
                                         <a class="badge bg-warning mr-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#"><i class="ri-delete-bin-line mr-0"></i>Eliminar</a> -->
@@ -43,6 +43,7 @@
                                         <a href=""><button class="btn btn-danger">Eliminar</button></a> -->
                                     </td>
                                 </tr>
+                                @include('inventario.categoria.modal')
                                 @endforeach
                             </table>
                         </div>
