@@ -971,6 +971,9 @@
     <!-- app JavaScript -->
     <script src="{{asset('js/app.js')}}"></script>
 
+    <!-- app JS Principal -->
+    <script src="{{asset('js/principal.js')}}"></script>
+
     <script>
         $(window).on("load",function(){
             $("#load").fadeOut();

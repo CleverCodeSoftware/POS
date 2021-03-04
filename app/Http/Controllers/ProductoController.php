@@ -26,7 +26,7 @@ class ProductoController extends Controller
             ->where('prod.condicion','=','1')
             ->orderBy('prod.idproducto','desc')
             ->paginate(7);
-            return view('inventario.producto.index',['productos'=>$productos,"searchText"=>$query]);
+            return view('inventario.producto.index',['producto'=>$productos,"searchText"=>$query]);
         }
     }
 
@@ -49,7 +49,7 @@ class ProductoController extends Controller
         $producto->condicion='1';
         if($request->hasFile('imagen')){
             $file=$request->file('imagen');
-            $nombreArchivo =  time() .'-'.$file->getClientOriginalName().'.' . $file->getClientOriginalExtension();            
+            $nombreArchivo =  rand(1,9).'_'.$file->getClientOriginalName();            
             $file->move(public_path().'/imagenes/productos/',$nombreArchivo);
             $producto->imagen=$nombreArchivo;
         }
@@ -58,7 +58,7 @@ class ProductoController extends Controller
     }
 
     public function show($id){
-        return view('inventario.producto.show',['productos'=>Producto::findOrFail($id)]);
+        return view('inventario.producto.show',['producto'=>Producto::findOrFail($id)]);
     }
 
     public function edit($id){
@@ -67,7 +67,7 @@ class ProductoController extends Controller
             ->where('condicion','=','1')
             ->get();
         
-        return view('inventario.producto.edit',['productos'=>$producto,'categorias'=>$categorias]);
+        return view('inventario.producto.edit',['producto'=>$producto,'categorias'=>$categorias]);
     }
 
     public function update(ProductoFormRequest $request,$id){

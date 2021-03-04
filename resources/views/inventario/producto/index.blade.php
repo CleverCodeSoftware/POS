@@ -31,7 +31,7 @@
                                     <th>Descripcion</th>
                                     <th>Opciones</th>
                                 </thead>
-                                @foreach ($productos as $prod)
+                                @foreach ($producto as $prod)
                                 <tr>
                                     <td>{{$prod->idproducto}}</td>
                                     <td>{{$prod->nombre}}</td>
@@ -52,7 +52,7 @@
                                 @endforeach
                             </table>
                         </div>
-                        {{$productos->render()}}
+                        {{$producto->render()}}
                     </div>
                 </div>
             </div>

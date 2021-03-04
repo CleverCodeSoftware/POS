@@ -65,21 +65,11 @@
                                     <div class="form-group">
                                         <label for="imagen">Imagen</label>
                                         <div class="input-group input-group-lg">
-                                            <!-- <div class="input-group-prepend">
-                                            <span class="input-group-text" id="inputGroup-sizing-default" for="imagen">Escoger archivo</span>
-                                            </div> -->
                                             <div class="custom-file">
                                                 <input type="file" class="custom-file-input" name="imagen" id="imagen" data-browse="Buscar">
                                                 <label class="custom-file-label" for="imagen" data-browse="Buscar">Escoger imagen</label>
                                             </div>
-                                            <!-- <input type="file" name="imagen" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"> -->
-                                        </div>
-
-                                        <!-- <div class="input-group mb-4">
-                                            <input type="file" name="imagen" class="form-control-lg custom-file-input" id="customFile">
-                                            <label class="custom-file-label" for="imagen">Choose file</label>
-                                        </div> -->
-                                        <!-- <input type="file" name="imagen" class="form-control">                             -->
+                                         </div>                           
                                     </div>
                                 </div>
                             </div>
