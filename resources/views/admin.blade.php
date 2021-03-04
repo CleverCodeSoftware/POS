@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>POS Dash | CleverCode</title>
+      <title>PRO Industry | CleverCode</title>
       
       <!-- Favicon -->
       <link rel="shortcut icon" href="{{asset('images/favicon.ico')}}" />
@@ -31,8 +31,8 @@
       
       <div class="iq-sidebar  sidebar-default ">
           <div class="iq-sidebar-logo d-flex align-items-center justify-content-between">
-              <a href="../backend/index.html" class="header-logo">
-                  <img src="{{asset('images/logo.png')}}" class="img-fluid rounded-normal light-logo" alt="logo"><h5 class="logo-title light-logo ml-3">POSDash</h5>
+              <a href="#" class="header-logo">
+                  <img src="{{asset('images/logo.png')}}" class="img-fluid rounded-normal light-logo" alt="logo"><h5 class="logo-title light-logo ml-3">PRO Industry</h5>
               </a>
               <div class="iq-menu-bt-sidebar ml-0">
                   <i class="las la-bars wrapper-menu"></i>
@@ -607,7 +607,7 @@
                       <i class="ri-menu-line wrapper-menu"></i>
                       <a href="../backend/index.html" class="header-logo">
                           <img src="{{asset('images/logo.png')}}" class="img-fluid rounded-normal" alt="logo">
-                          <h5 class="logo-title ml-3">POSDash</h5>
+                          <h5 class="logo-title ml-3">PRO Industry</h5>
       
                       </a>
                   </div>
